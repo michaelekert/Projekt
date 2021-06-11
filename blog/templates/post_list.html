@@ -1,0 +1,22 @@
+{% extends 'index.html' %}
+{% block content %}
+    {% if user.is_authenticated %}
+        <div class="container-lg mt-4">
+        <div class="row mb-2">
+        {% for post in object_list %}
+            <div class="col-md-6">
+                <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+                    <div class="col p-4 d-flex flex-column position-static">
+                        <h3 class="mb-0">{{ post.title }}</h3>
+                        <div class="mb-1 text-muted">Autor: {{ post.author }}</div>
+                        <a href="{% url 'post_detail' post.pk %}" class="stretched-link">Więcej</a>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+    {% else %}
+        <h1>You're not login</h1>
+    {% endif %}
+</div>
+</div>
+{% endblock %}

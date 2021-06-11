@@ -1,0 +1,26 @@
+{% extends 'index.html' %}
+{% load static %}
+{% block content %}
+    {% if user.is_authenticated %}
+        <div class="container-sm mt-4">
+            <div class="card text-center">
+                <div class="card-header fs-1">
+                    {{ post.title }}
+                </div>
+                <div class="card-header fs-4">
+                    Autor: {{ post.author }}
+                </div>
+                <div class="card-body">
+                    <p class="card-text fs-3">
+                        {{ post.text }}
+                    </p>
+                </div>
+                <div class="card-footer text-muted">
+                    {{ post.created_date }}
+                </div>
+            </div>
+        </div>
+    {% else %}
+        <h1>You're not login</h1>
+    {% endif %}
+{% endblock %}

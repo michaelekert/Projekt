@@ -1,0 +1,28 @@
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'login/style.css' %}">
+
+{% block content %}
+    <form method="POST" class="login_form">
+        <h1>Elegancko<sub>&copy</sub></h1>
+
+        {% for field in form %}
+            {% csrf_token %}
+            <div class="fieldWrapper">
+                {{ field }}
+            </div>
+        {% endfor %}
+        {% for error in form.non_field_errors %}
+            <p id="error">{{ error }}</p>
+        {% endfor %}
+        <input type="submit" name="" value="Zaloguj się">
+    </form>
+
+
+    <script>
+        let set_login = document.getElementById("id_username");
+        let set_password = document.getElementById("id_password");
+        set_login.setAttribute("placeholder", "Login");
+        set_password.setAttribute("placeholder", "Hasło");
+    </script>
+
+{% endblock %}
