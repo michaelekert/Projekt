@@ -1,0 +1,16 @@
+{% extends 'index.html' %}
+{% block content %}
+    {% if user.is_authenticated %}
+        <form method="POST">
+            {% csrf_token %}
+            {{ form }}
+            <button type="submit" class="btn btn-success mt-4">Dodaj komentarz</button>
+        </form>
+
+        <script>
+            let user = "{{ user.id }}";
+            document.getElementById("current_user").value = user;
+        </script>
+    {% else %}
+    {% endif %}
+{% endblock %}

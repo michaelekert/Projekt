@@ -19,6 +19,18 @@
                     {{ post.created_date }}
                 </div>
             </div>
+            <a href="{% url 'comment_add' post.pk %}"><button type="button" class="btn btn-info mt-5">Dodaj komentarz</button></a>
+        <h2 class="mt-5 mb-3">Komentarze</h2>
+        {% for comment in post.comments.all %}
+            <div class="card-header">
+                   Autor: {{ comment.author}}
+            </div>
+                <div class="card-body bg-light mb-3">
+                    <p class="card-text">
+                        {{ comment.comment }}
+                    </p>
+                </div>
+        {% endfor %}
         </div>
     {% else %}
         <h1>You're not login</h1>

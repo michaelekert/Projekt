@@ -16,3 +16,18 @@ class Post(models.Model):
 
     def get_absolute_url(self):
         return reverse('post_detail', args=(str(self.id),) )
+
+
+
+class Comment(models.Model):
+    post = models.ForeignKey(Post, related_name="comments",on_delete=models.CASCADE)
+    author = models.ForeignKey(User, on_delete=models.CASCADE)
+    comment = models.TextField()
+
+
+    def __str__(self):
+        return self.comment
+
+
+    def get_absolute_url(self):
+        return reverse('comment_add', args=(str(self.id),) )
