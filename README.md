@@ -9,7 +9,7 @@ Aplikacja została napisana w
 - Python 3.9.5
 - Django 3.2.4
 
-## ❗ Konfiguracja postresql 
+## ❗ Konfiguracja Postresql 
 
 Aby aplikacja działała poprawnie należy zalogować się w konsoli na użytkownika "postgres" poniższym poleceniem:
 
