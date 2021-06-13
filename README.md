@@ -11,14 +11,7 @@ Aplikacja została napisana w
 
 ## Instalacja i uruchamianie
 
-Po sklonowaniu aplikacji z repozytorium użyj menadżera pakietów [pip](https://pip.pypa.io/en/stable/) do zainatalowania zależności aplikacji.
-
-```bash
-pip install -r requirements.txt
-``` 
-
-Nastepnie należy uruchomić środowisko wirtualne:  
-
+Po sklonowaniu aplikacji z repozytorium należy uruchomić środowisko wirtualne:
 
 ### Linux & OS X
 
@@ -27,9 +20,16 @@ source venv/bin/activate
 ```
 ### Windows
 
+
 ```bash
 venv\Scripts\activate
 ```
+
+Nastepnie użyj menadżera pakietów [pip](https://pip.pypa.io/en/stable/) do zainatalowania zależności aplikacji. 
+
+```bash
+pip install -r requirements.txt
+``` 
 
 Kiedy mamy uruchomione środowisko uruchamiamy aplikacje poleceniem:
 
