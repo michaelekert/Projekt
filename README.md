@@ -9,7 +9,7 @@ Aplikacja została napisana w
 - Python 3.9.5
 - Django 3.2.4
 
-## ❗ Aplikacja korzystaa z bazy danych Postgresql 
+## ❗ Konfiguracja postresql 
 
 Aby aplikacja działała poprawnie należy zalogować się w konsoli na użytkownika "postgres" poniższym poleceniem:
 
@@ -37,6 +37,14 @@ GRANT ALL PRIVILAGES ON DATABASE blog_db to administrator;
 ```bash
 ALTER DATABASE blog_db owner to administrator;
 ```
+
+Po wpisaniu powyższych komend, przechodzimy do nowego okna terminala i wykonujemy polecenie:
+
+```bash
+psql -U postgres DATABASE_NAME < backup.sql
+```
+dzięki temu poleceniu prześlemy przykładowe dane do naszej bazy danych
+
 ## Instalacja i uruchamianie
 
 Po sklonowaniu aplikacji z repozytorium należy uruchomić środowisko wirtualne:
