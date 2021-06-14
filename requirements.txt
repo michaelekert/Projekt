@@ -1,6 +1,5 @@
 Django==3.2.4
 asgiref==3.3.4
-Django==3.2.4
 django-js-asset==1.2.2
 pip==21.1.2
 psycopg2-binary==2.8.6
