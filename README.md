@@ -1,6 +1,6 @@
 # Blogens elegancki 🅱️
 
-Prosty szkielet blog'a napisany w framework'u Django
+Prosty szkielet blog'a napisany w framework'u Django wykonany przez grupę 3
 
 ![blog](./images/blog.png)
 ![blog-kolejny](./images/blog1.png)
